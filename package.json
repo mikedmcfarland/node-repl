@@ -2,16 +2,20 @@
   "name": "es6test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
   "dependencies": {
-    "engulped": "git://github.com/mikedmcfarland/engulped#6to5"
+    "debug": "^2.1.1",
+    "engulped": "git://github.com/mikedmcfarland/engulped#6to5",
+    "json-socket": "^0.1.2",
+    "lodash": "^2.4.1",
+    "promise": "^6.1.0"
   },
   "devDependencies": {
+    "6to5": "^2.13.5",
     "gulp": "^3.8.10"
   }
 }
