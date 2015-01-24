@@ -1,23 +1,23 @@
 var gulp = require('gulp')
 require('engulped')(gulp)
+require('6to5/register')
+
+//run tests, then require file
+function defineRunTask(name,deps){
+  if(deps === undefined)
+    deps = ['test']
+
+  gulp.task('run-'+name,deps,function(){
+    //many of these are command line programs
+    //and we need to push off the gulp job name
+    process.argv.shift()
+
+    require('./lib/'+name)
+  })
+}
 
 gulp.task('default',['build','test'])
-gulp.task('run', ['build','test'], function() {
-  require('./dist/')
-})
-
-gulp.task('run-client', ['build','test'], function() {
-  new require('./dist/client')
-})
-
-gulp.task('run-one-client', ['build','test'], function() {
-  new require('./dist/connectOne')
-})
-
-gulp.task('run-one-server', ['build','test'], function() {
-  new require('./dist/serveOne')
-})
-
-gulp.task('run-server', ['build','test'], function() {
-  new require('./dist/server')
-})
+defineRunTask('client')
+defineRunTask('connectOne')
+defineRunTask('serveOne')
+defineRunTask('server')
