@@ -1,13 +1,13 @@
 var gulp = require('gulp')
-
 require('engulped')(gulp)
+
 gulp.task('default',['build','test'])
 gulp.task('run', ['build','test'], function() {
   require('./dist/')
 })
 
 gulp.task('run-client', ['build','test'], function() {
-  new require('./dist/connectClient')
+  new require('./dist/client')
 })
 
 gulp.task('run-one-client', ['build','test'], function() {
@@ -19,5 +19,5 @@ gulp.task('run-one-server', ['build','test'], function() {
 })
 
 gulp.task('run-server', ['build','test'], function() {
-  new require('./dist/manageConnections')
+  new require('./dist/server')
 })
