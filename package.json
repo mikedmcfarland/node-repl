@@ -1,21 +1,24 @@
 {
-  "name": "es6test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "name": "repl-jack",
+  "version": "0.0.1",
+  "description": "Utility for connecting to a remote node application with a node js REPL",
+  "main": "dist/Jack.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "gulp build",
+    "build": "gulp",
+    "test": "gulp test",
+    "jack-make": "gulp run-jack-make",
+    "jack-connect": "gulp run-jack-connect"
   },
-  "author": "",
+  "author": "Michael Mcfarland",
   "dependencies": {
     "debug": "^2.1.1",
-    "engulped": "git://github.com/mikedmcfarland/engulped#6to5",
     "json-socket": "^0.1.2",
     "lodash": "^2.4.1",
-    "minimist": "^1.1.0",
-    "promise": "^6.1.0"
+    "nomnom": "^1.8.1"
   },
   "devDependencies": {
+    "engulped": "git://github.com/mikedmcfarland/engulped#6to5",
     "6to5": "^2.13.5",
     "gulp": "^3.8.10"
   }

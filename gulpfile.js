@@ -16,8 +16,9 @@ function defineRunTask(name,deps){
   })
 }
 
+
 gulp.task('default',['build','test'])
-defineRunTask('client')
-defineRunTask('connectOne')
+defineRunTask('jack-connect')
+defineRunTask('jack-make')
 defineRunTask('serveOne')
-defineRunTask('server')
+defineRunTask('connectOne')
