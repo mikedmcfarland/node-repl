@@ -6,7 +6,7 @@ Essentially you run a Jack server, giving it a context for your REPLs. Then any 
 
 # installation
 
-You can use npm to install : 'npm install repl-jack'
+You can use npm to install : `npm install repl-jack`
 
 # Running a jack
 
