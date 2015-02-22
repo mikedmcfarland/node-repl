@@ -40,7 +40,7 @@ Here's the node jS API
 ```javascript
 
 var FooModule = require('FooModule');
-var Jack = require('Jack');
+var Jack = require('repl-jack');
 
 var jack = new Jack({
   context : { FooModule : FooModule},
